@@ -8,7 +8,8 @@ module.exports = {
 		root: __dirname,
 		alias: {
 			Main: 'app/components/Main.jsx',
-			Data: 'app/api/stockData.jsx'
+			Data: 'app/api/stockData.jsx',
+			StockForm: 'app/components/StockForm.jsx'
 		},
 		extensions: ['', '.js', '.jsx']
 	},
