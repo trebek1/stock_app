@@ -3,7 +3,12 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var {Router, Route, IndexRoute, hashHistory} = require('react-router');
+var Main = require('Main');
 
 ReactDOM.render(
-	<h1> Boilerplate </h1>, document.getElementById('app')
+	<Router history={hashHistory}>
+		<Route path="/" component={Main}> 
+		</Route>
+	</Router>, document.getElementById('app')
 );

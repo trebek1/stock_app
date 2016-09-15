@@ -7,7 +7,8 @@ module.exports = {
 	resolve: {
 		root: __dirname,
 		alias: {
-			
+			Main: 'app/components/Main.jsx',
+			Data: 'app/api/stockData.jsx'
 		},
 		extensions: ['', '.js', '.jsx']
 	},
@@ -22,5 +23,6 @@ module.exports = {
 			exclude: /(node_modules| bower_components)/
 		}
 		]
-	}
+	},
+	devtool: 'inline-source-map'
 };
