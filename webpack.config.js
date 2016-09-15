@@ -9,7 +9,8 @@ module.exports = {
 		alias: {
 			Main: 'app/components/Main.jsx',
 			Data: 'app/api/stockData.jsx',
-			StockForm: 'app/components/StockForm.jsx'
+			StockForm: 'app/components/StockForm.jsx',
+			StockInfo: 'app/components/StockInfo.jsx'
 		},
 		extensions: ['', '.js', '.jsx']
 	},

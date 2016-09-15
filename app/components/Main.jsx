@@ -1,5 +1,6 @@
 var React = require('react');
 var StockForm = require('StockForm');
+var StockInfo = require('StockInfo');
 
 var Main = React.createClass({
 	
@@ -9,7 +10,16 @@ var Main = React.createClass({
 
 	render: function(){
 		return <div id="main-wrapper">
-				<StockForm onSearch={this.stockHandler}/>
+				<div>
+					<h3> Enter the Ticker for a Stock Here </h3>
+				</div>
+				<div>
+					<StockForm onSearch={this.stockHandler}/>
+				</div>
+				<br/>
+				<div>
+					<StockInfo/>
+				</div>
 			</div>
 	}
 });
