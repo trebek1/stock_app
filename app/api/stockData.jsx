@@ -1,17 +1,15 @@
 var axios = require('axios');
 
-//const KEY = "32164d9c4c1358379509b682fd35226a"; 
-//const OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?appid=' + KEY + '&units=imperial'; 
-
-//
+const KEY = "4D1WMS5wp8gfKKexQFsv"; 
 
 module.exports = {
 	getData: function(ticker){
 		
-		var requestUrl = `${OPEN_WEATHER_MAP_URL}&q=${ticker}`;
+		const QUANDL_DATA = 'https://www.quandl.com/api/v3/datasets/WIKI/' + ticker + '.json' + '?api_key=' + KEY;
+		
 
-		return axios.get(requestUrl).then(function(res){
-			console.log("this is res ", res); 
+		return axios.get(QUANDL_DATA).then(function(res){
+			return res.data.dataset;
 			//return res; 
 
 		}).catch(function(res){
