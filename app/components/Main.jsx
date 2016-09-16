@@ -20,7 +20,8 @@ var Main = React.createClass({
 		StockData.getData(ticker).then(function(temp){
 			console.log("this is temp ", temp);
 			_this.setState({
-				loading: false
+				loading: false,
+				data: temp
 			})
 		}, function(errorMessage){
 			alert(errorMessage);
