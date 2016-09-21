@@ -3,10 +3,11 @@ var LineChart = require('LineChart');
 
 var Chart = React.createClass({
     render:function(){
+    	var data = this.props.data;
         return (
             <div>
                 <div>
-                    <LineChart/>
+                    <LineChart data={data}/>
                 </div>
             </div>
         )

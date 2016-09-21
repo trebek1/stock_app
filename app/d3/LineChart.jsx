@@ -10,8 +10,8 @@ var LineChart = React.createClass({
         return {
             width:500,
             height: 200,
-            tooltip:{ display:false,data:{key:'',value:''}}
-        	
+            tooltip:{ display:false,data:{key:'',value:''}},
+            data: this.props.data	
         };
     },
 
@@ -38,13 +38,9 @@ var LineChart = React.createClass({
 	},
 
     render:function(){
-        var data=[
-                ["2016-09-20",113.05,114.12,112.51,113.57], 
-                ["2016-09-19",115.19,116.18,113.25,113.58],
-                ["2016-09-16",115.12,116.13,114.04,114.92]
-            ]; 
+
+        var data = this.state.data
         
- 
         var margin = {top: 5, right: 50, bottom: 20, left: 50},
             w = this.state.width - (margin.left + margin.right),
             h = this.state.height - (margin.top + margin.bottom);

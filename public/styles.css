@@ -1,6 +1,5 @@
 #main-wrapper{
-	text-align: center;
-	
+	text-align: center;	
 }
 
 .graph{
@@ -9,15 +8,13 @@
 }
 
 .data-container{
-
 	display:inline-block;
 	height: 300px;
 	width: 500px;
 	text-align: center;
 	border-color: black;
 	border-width: 1px;
-	border-style: dashed;
-	
+	border-style: dashed;	
 }
 
 .cs{
@@ -37,7 +34,6 @@ body {
     fill: none;
     stroke: #7dc7f4;
     stroke-width: 5px;
-
 }
 
 .domain{
@@ -55,7 +51,6 @@ body {
     fill: none;
     stroke: none;
     shape-rendering: crispEdges;
-
 }
 
 .axis text {
@@ -67,8 +62,7 @@ body {
 	text-align: center; 
     background-color: #3f5175;
     border-radius: 4px;
-    height: 200px;
-
+    height: 250px;
     box-shadow: 1px 1px 1px 0px rgba(37,41,51,1);
 }
 

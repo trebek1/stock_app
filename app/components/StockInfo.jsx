@@ -20,21 +20,23 @@ var StockInfo = React.createClass({
 					</div>
 		}else{
 			
-			var data = this.props.data.data[0];
+			var data = this.props.data.data;
+
+			console.log("this is data ", data);
 			
 			return<div>
 					
 					<div className="data-container">
 						<div className='graph'>
-							<Chart/>
+							<Chart data= {data}/>
 						</div>
 
-						<div>Date: {data[0]}  </div>
-						<div>Open: {data[1]}  </div>
-						<div>High: {data[2]}  </div>
-						<div>Low: {data[3]}  </div>
-						<div>Close: {data[4]}  </div>
-						<div>Volume: {data[5]}  </div>
+						<div>Date:   {data[0][0]}  </div>
+						<div>Open:   {data[0][1]}  </div>
+						<div>High:   {data[0][2]}  </div>
+						<div>Low:    {data[0][3]}  </div>
+						<div>Close:  {data[0][4]}  </div>
+						<div>Volume: {data[0][5]}  </div>
 						
 
 					</div>
