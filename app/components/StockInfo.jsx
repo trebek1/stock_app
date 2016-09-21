@@ -20,13 +20,16 @@ var StockInfo = React.createClass({
 					</div>
 		}else{
 			
+			//Data
 			var data = this.props.data.data;
+
+			//Color green if up red if down for the day
 			var styles = data[0][4] > data[1][4] ? 'up' : 'down'; 
-			console.log(this.props.data);
+			
+			//Get the name from the extended header
 			var name = this.props.data.name.split(' ');
-			console.log("this is name ", name)
 			var res = name.slice(0,name.indexOf('Prices,')).join(' ');
-				console.log("this is res ", res);
+				
 
 			
 			return<div>
