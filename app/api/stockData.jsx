@@ -9,6 +9,7 @@ module.exports = {
 		
 
 		return axios.get(QUANDL_DATA).then(function(res){
+			console.log("this is res ", res)
 			return res.data.dataset;
 			//return res; 
 
