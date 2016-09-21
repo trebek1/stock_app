@@ -42,7 +42,7 @@ var LineChart = React.createClass({
         var data = this.state.data
         var column = 11;
         
-        var margin = {top: 5, right: 50, bottom: 20, left: 50},
+        var margin = {top: 20, right: 50, bottom: 20, left: 50},
             w = this.state.width - (margin.left + margin.right),
             h = this.state.height - (margin.top + margin.bottom);
  

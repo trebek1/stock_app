@@ -24,18 +24,17 @@ var StockInfo = React.createClass({
 			var data = this.props.data.data;
 
 			//Color green if up red if down for the day
-			var styles = (data[0][4] > data[1][4] ? 'up' : 'down'); 
-			console.log(data[0][4], data[1][4], data[0][4] > data[1][4] )
+			var styles = (data[0][4] > data[1][4] ? 'up no-margin' : 'down no-margin'); 
+			var customWidth = "data-width " + styles; 
+			
 			//Get the name from the extended header
 			var name = this.props.data.name.split(' ');
 			var res = name.slice(0,name.indexOf('Prices,')).join(' ');
-			//console.log("this is data ", data);
+			
 			var yesterdayClose = data[1][4];
 			var change = (data[0][4] - data[1][4]).toFixed(2); 
 			var percent = (change/yesterdayClose*100).toFixed(2) + '%'; 
 				
-
-			
 			return<div>
 					
 					<div className="data-container">
@@ -46,41 +45,46 @@ var StockInfo = React.createClass({
 						<div className="today">
 							<h3 className='stock-header'> Information for {res} </h3>
 							<div className="data">
-
-								<table>
-									<tbody>
-										<tr>
-											<td className="stat">Date</td>
-											<td>{data[0][0]}</td>
-										</tr>
-										<tr>
-											<td className="stat">Open</td>
-											<td>{data[0][1]}</td>
-										</tr>
-										<tr>
-											<td className="stat">High</td>
-											<td>{data[0][2]}</td>
-										</tr>
-										<tr>
-											<td className="stat">Low</td>
-											<td>{data[0][3]}</td>
-										</tr>
-										<tr>
-											<td className="stat">Close</td>
-											<td className={styles}>{data[0][4]}</td>
-										</tr>
-										<tr>
-											<td className="stat">Volume</td>
-											<td>{data[0][5]}</td>
-										</tr>
-									</tbody>
-								</table>
-								<div className="daily">
-									<h1> Daily Change</h1>
-									<h3 className={styles}>Absolute: {change}</h3>
-									<h3 className={styles}>Percent: {percent}</h3>
+								<div className="table-wrapper">
+									<table>
+										<tbody>
+											<tr>
+												<td className="stat">Date</td>
+												<td>{data[0][0]}</td>
+											</tr>
+											<tr>
+												<td className="stat">Open</td>
+												<td>{data[0][1]}</td>
+											</tr>
+											<tr>
+												<td className="stat">High</td>
+												<td>{data[0][2]}</td>
+											</tr>
+											<tr>
+												<td className="stat">Low</td>
+												<td>{data[0][3]}</td>
+											</tr>
+											<tr>
+												<td className="stat">Close</td>
+												<td className={styles}>{data[0][4]}</td>
+											</tr>
+											<tr>
+												<td className="stat">Volume</td>
+												<td>{data[0][5]}</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div className="data-wrapper daily">
+									<h2 className="margin"> Daily Change</h2>
+			
+									<br/>
+									<div className="stat-wrapper"><div className="daily-width">Absolute:</div> <div className={customWidth}>{change}</div></div>
+									<div className="stat-wrapper"><div className="daily-width">Percent:</div>  <div className={customWidth}>{percent}</div></div>					
+									
 								</div>
 							</div>
+							
 						</div>
 
 					</div>

@@ -17,8 +17,29 @@
     color: #33FF64;
 }
 
+left{
+    text-align: left;
+}
+
+.daily-width{
+    width: 100px;
+    text-align: center;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
 .daily{
+    height:150px;
+    width:250px;
     display: inline-block;
+    vertical-align: top;z
+    
+}
+
+.table-wrapper{
+    height: 150px;
+    width: 200px;
+    display: inline-block;   
 }
 
 .down{
@@ -56,6 +77,27 @@ body {
 	stroke: #3f5175;
 }
 
+.no-margin{
+    margin: 0 0 0 0;
+}
+
+.data-width{
+    width: 50px;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+}
+
+.daily-width{
+    width: 100px;
+    display: inline-block;
+    text-align: left;
+}
+
+.stat-wrapper{
+    width: 160px;
+    display: inline-block;
+}
 .axis{
     fill:#bbc7d9;
     opacity: 1;
@@ -73,6 +115,7 @@ body {
 }
 
 .data{
+    width: 500px;
     border-color: black;
     border-width: 1px;
     border-style: dashed;  
