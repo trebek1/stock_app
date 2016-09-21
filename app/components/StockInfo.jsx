@@ -24,11 +24,15 @@ var StockInfo = React.createClass({
 			var data = this.props.data.data;
 
 			//Color green if up red if down for the day
-			var styles = data[0][4] > data[1][4] ? 'up' : 'down'; 
-			
+			var styles = (data[0][4] > data[1][4] ? 'up' : 'down'); 
+			console.log(data[0][4], data[1][4], data[0][4] > data[1][4] )
 			//Get the name from the extended header
 			var name = this.props.data.name.split(' ');
 			var res = name.slice(0,name.indexOf('Prices,')).join(' ');
+			//console.log("this is data ", data);
+			var yesterdayClose = data[1][4];
+			var change = (data[0][4] - data[1][4]).toFixed(2); 
+			var percent = (change/yesterdayClose*100).toFixed(2) + '%'; 
 				
 
 			
@@ -42,6 +46,7 @@ var StockInfo = React.createClass({
 						<div className="today">
 							<h3 className='stock-header'> Information for {res} </h3>
 							<div className="data">
+
 								<table>
 									<tbody>
 										<tr>
@@ -70,6 +75,11 @@ var StockInfo = React.createClass({
 										</tr>
 									</tbody>
 								</table>
+								<div className="daily">
+									<h1> Daily Change</h1>
+									<h3 className={styles}>Absolute: {change}</h3>
+									<h3 className={styles}>Percent: {percent}</h3>
+								</div>
 							</div>
 						</div>
 

@@ -14,11 +14,15 @@
 }
 
 .up{
-    color: red;
+    color: #33FF64;
+}
+
+.daily{
+    display: inline-block;
 }
 
 .down{
-    color: #33FF64;
+    color: red;
 }
 
 .data-container{
