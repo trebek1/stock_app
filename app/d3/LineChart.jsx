@@ -40,6 +40,7 @@ var LineChart = React.createClass({
     render:function(){
 
         var data = this.state.data
+        var column = 11;
         
         var margin = {top: 5, right: 50, bottom: 20, left: 50},
             w = this.state.width - (margin.left + margin.right),
@@ -57,7 +58,6 @@ var LineChart = React.createClass({
 
         var x = d3.scaleTime()
             .domain(d3.extent(data, function(d) {
-                console.log(d[d.length -1])
                 return d[d.length -1];
             }))
             .rangeRound([0, w]);
@@ -66,10 +66,9 @@ var LineChart = React.createClass({
 
         var y = d3.scaleLinear()
             .domain([d3.min(data,function(d){
-                return d[4] - 20
+                return d[column] - 20
             }),d3.max(data,function(d){
-                console.log(d[4])
-                return d[4] + 20
+                return d[column] + 20
             })])
             .range([h, 0]);
  
@@ -79,42 +78,17 @@ var LineChart = React.createClass({
                 return x(d[d.length -1]);
             })
             .y(function (d) {
-                return y(d[4]);
+                return y(d[column]);
             }).curve(d3.curveCatmullRom.alpha(0.5));
  
         var transform='translate(' + margin.left + ',' + margin.top + ')';
-
-
-        // data.forEach(function (d) {
-        //     d.date = parseDate(d.day);
-            
-          
-        // });
-
 
         var yAxis = d3.axisLeft()
             .scale(y)
             .ticks(5)
 
-            
-
-        
 		var xAxis = d3.axisBottom()
 		   .scale(x)
-		  //  .tickFormat(function (d) {
-		  
-			  
-		  // return d3.timeFormat('%a %d')(new Date(d))
-		//})
-		 
-		 // .tickFormat(function (d) {
-			//   var mapper = {
-			//     "This": "This is long",
-			//     "That": "That is long",
-			//     "Other": "Other is long"
-			//   }
-			//   return mapper[d]
-			// })
 		 
 		var yGrid = d3.axisLeft()
 		   .scale(y)

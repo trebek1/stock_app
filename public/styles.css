@@ -2,9 +2,23 @@
 	text-align: center;	
 }
 
+.head{
+    align: center;
+}
+.stat{
+    color: #FFF933;   
+}
 .graph{
     width: 500px;
     text-align: center;
+}
+
+.up{
+    color: red;
+}
+
+.down{
+    color: #33FF64;
 }
 
 .data-container{
@@ -12,9 +26,6 @@
 	height: 300px;
 	width: 500px;
 	text-align: center;
-	border-color: black;
-	border-width: 1px;
-	border-style: dashed;	
 }
 
 .cs{
@@ -55,6 +66,17 @@ body {
 
 .axis text {
     font-size: 14px;
+}
+
+.data{
+    border-color: black;
+    border-width: 1px;
+    border-style: dashed;  
+    background-color: #A9A9A9;
+
+}
+.stock-header{
+    color: #FF8B32; 
 }
 
 #container{

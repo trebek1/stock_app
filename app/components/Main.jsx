@@ -18,7 +18,7 @@ var Main = React.createClass({
 			loading: true
 		})
 		StockData.getData(ticker).then(function(temp){
-			console.log("this is temp ", temp);
+			
 			_this.setState({
 				loading: false,
 				data: temp
@@ -29,14 +29,12 @@ var Main = React.createClass({
 				loading: false
 			})
 		});
-
-		console.log(this.state);
 	},
 
 	render: function(){
 		return <div id="main-wrapper">
 				<div>
-					<h3> Enter the Ticker for a Stock Here </h3>
+					<h3 className="stock-header"> Enter the Ticker for a Stock Here </h3>
 				</div>
 				<div>
 					<StockForm onSearch={this.stockHandler}/>
