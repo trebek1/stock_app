@@ -10,7 +10,13 @@ module.exports = {
 			Main: 'app/components/Main.jsx',
 			Data: 'app/api/stockData.jsx',
 			StockForm: 'app/components/StockForm.jsx',
-			StockInfo: 'app/components/StockInfo.jsx'
+			StockInfo: 'app/components/StockInfo.jsx',
+			Axis: 'app/d3/Axis.jsx',
+			Chart: 'app/d3/Chart.jsx',
+			Dots: 'app/d3/Dots.jsx',
+			Grid: 'app/d3/Grid.jsx',
+			LineChart: 'app/d3/LineChart.jsx',
+			ToolTip: 'app/d3/ToolTip.jsx'
 		},
 		extensions: ['', '.js', '.jsx']
 	},

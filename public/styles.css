@@ -3,10 +3,15 @@
 	
 }
 
+.graph{
+    width: 500px;
+    text-align: center;
+}
+
 .data-container{
 
 	display:inline-block;
-	height: 500px;
+	height: 300px;
 	width: 500px;
 	text-align: center;
 	border-color: black;
@@ -62,7 +67,7 @@ body {
 	text-align: center; 
     background-color: #3f5175;
     border-radius: 4px;
-    height: 400px;
+    height: 200px;
 
     box-shadow: 1px 1px 1px 0px rgba(37,41,51,1);
 }
@@ -79,5 +84,6 @@ line {
 text{
 	fill: #bbc7d9;
 }
+
 
 
