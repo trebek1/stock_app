@@ -39,7 +39,8 @@ left{
 .table-wrapper{
     height: 150px;
     width: 200px;
-    display: inline-block;   
+    display: inline-block; 
+    font-weight: bold;  
 }
 
 .down{
@@ -86,6 +87,7 @@ body {
     display: inline-block;
     text-align: right;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .daily-width{
@@ -119,7 +121,7 @@ body {
     border-color: black;
     border-width: 1px;
     border-style: dashed;  
-    background-color: #A9A9A9;
+    background-color: #656565;
 
 }
 .stock-header{
