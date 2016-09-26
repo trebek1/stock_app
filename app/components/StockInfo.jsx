@@ -12,10 +12,21 @@ var StockInfo = React.createClass({
 					</div>
 					
 		}
-		else if(!this.props.data){
+		else if(!this.props.data && !this.props.error){
+				
+				
 			return <div>
 						<div className="data-container">
-							
+				
+						</div>	
+					</div>
+		}else if(this.props.error){
+				
+				var err = this.props.error; 
+				console.log('this is err ', err)
+			return <div>
+						<div className="data-container stock-header">
+							{err}
 						</div>	
 					</div>
 		}else{

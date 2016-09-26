@@ -8,25 +8,30 @@ var Main = React.createClass({
 	getInitialState: function(){
 		return{
 			data: null,
-			loading: false
+			loading: false,
+			error: false
 		}
 	},
 	
 	stockHandler: function(ticker){
 		var _this = this; 
 		this.setState({
-			loading: true
+			loading: true,
+			error: false
 		})
 		StockData.getData(ticker).then(function(temp){
 			
 			_this.setState({
 				loading: false,
-				data: temp
+				data: temp,
+				error: false
 			})
 		}, function(errorMessage){
-			alert(errorMessage);
+			var error = "Cannot find data for this ticker"
 			_this.setState({
-				loading: false
+				loading: false,
+				data: null,
+				error: error
 			})
 		});
 	},
@@ -41,7 +46,7 @@ var Main = React.createClass({
 				</div>
 				<br/>
 				<div>
-					<StockInfo data={this.state.data} loading={this.state.loading}/>
+					<StockInfo data={this.state.data} error={this.state.error} loading={this.state.loading}/>
 				</div>
 			</div>
 	}

@@ -5,6 +5,8 @@ var axios = require('axios');
 // bitcoin https://www.quandl.com/api/v3/datasets/BITFINEX/BTCUSD.json?api_key=4D1WMS5wp8gfKKexQFsv
 // S&P500 https://www.quandl.com/api/v3/datasets/YAHOO/INDEX_SPY.json?api_key=4D1WMS5wp8gfKKexQFsv
 
+//financial times headlines: https://newsapi.org/v1/articles?source=financial-times&sortBy=latest&apiKey= 348e044f228f4064bf2a25d7803e6c41
+
 
 const KEY = "4D1WMS5wp8gfKKexQFsv"; 
 
